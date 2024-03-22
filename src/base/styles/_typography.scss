@@ -1,0 +1,94 @@
+h1, h2, h3, h4, h5, h6, p {
+    font-family: $primary;
+}
+
+h1 {
+    font-size: 73px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    color: $white;
+    span {
+        font-weight: normal;
+    }
+}
+
+h2 {
+    font-size: 34px;
+    line-height: 1.2em;
+    color: $blue;
+    font-weight: 900;
+    span {
+        font-weight: 700;
+        font-style: italic;
+    }
+}
+
+h3 {
+    font-size: 27px;
+    color: $black;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 58px;
+    font-weight: 900;
+}
+
+h5 {
+    font-size: 38px;
+    font-weight: 900;
+    color:$white;
+}
+
+h6 {
+    font-size: 28px;
+    font-weight: 900;
+    color:$white;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: 500;
+    color: $black;
+}
+
+//text colors
+.blue-text {
+    color: $blue !important; 
+}
+.light-blue-text {
+    color: $blue-light !important; 
+}
+.orange-text {
+    color: $orange !important;
+}
+.green-text {
+    color: $green !important;
+}
+
+.font-italic {
+    font-style: italic !important;
+}
+
+.font-bold {
+    font-weight: bold !important;
+}
+
+.font-black {
+    font-weight: 900 !important;
+}
+
+
+
+
+.button-hollow-orange {
+    color: $orange !important;
+    // border: 3px solid $orange !important;
+    font-size: 17px;
+    // &::hover {
+    //     color: $white !important;
+    //     background-color: $orange !important;
+    //     border: 3px solid $white !important;
+}
+

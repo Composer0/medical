@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Gravitas+One|Merriweather:400,400i,700,700i,900,900i|Oswald:300,400,600');
+
+
+
+// !Testing will need to occur
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlack.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlack.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlack.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlack.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlack.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlack.svg#AauxProOTBlack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlackItalic.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlackItalic.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlackItalic.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlackItalic.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlackItalic.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBlackItalic.svg#AauxProOTBlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBold.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBold.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBold.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBold.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBold.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBold.svg#AauxProOTBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBoldItalic.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBoldItalic.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBoldItalic.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBoldItalic.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBoldItalic.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTBoldItalic.svg#AauxProOTBoldItalic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLight.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLight.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLight.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLight.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLight.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLight.svg#AauxProOTLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLightItalic.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLightItalic.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLightItalic.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLightItalic.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLightItalic.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTLightItalic.svg#AauxProOTLightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMedium.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMedium.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMedium.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMedium.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMedium.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMedium.svg#AauxProOTMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMediumItalic.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMediumItalic.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMediumItalic.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMediumItalic.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMediumItalic.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTMediumItalic.svg#AauxProOTMediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegular.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegular.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegular.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegular.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegular.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegular.svg#AauxProOTRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aauxpro_ot';
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegularItalic.eot');
+    src: url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegularItalic.eot') format('embedded-opentype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegularItalic.woff2') format('woff2'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegularItalic.woff') format('woff'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegularItalic.ttf') format('truetype'),
+         url('https://fonts.ocozzio.com/AauxProOT/AauxProOTRegularItalic.svg#AauxProOTRegularItalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}

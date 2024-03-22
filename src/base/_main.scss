@@ -1,0 +1,14 @@
+// @import 'node_modules/normalize-css/normalize.css';
+
+// base
+@import 'styles/variables';
+@import 'styles/animations';
+@import 'styles/fonts';
+@import 'styles/mixins';
+@import 'styles/utilities';
+@import 'styles/typography';
+
+// vendors
+
+// globals and overrides
+@import 'styles/globals';

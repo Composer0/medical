@@ -1,0 +1,61 @@
+@import '../../base/main';
+
+#card-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-wrapper {
+    position: relative;
+    max-width: 350px;
+    border-radius: 25px;
+    background-color: $gray-light;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 20px;
+    .img-wrapper {
+        img {
+            border-radius: 25px 25px 0 0;
+            max-width: 350px;
+        }
+    }
+    .desc-wrapper {
+        text-align: center;
+        h3 {
+            font-size: 20px;
+            color: $blue;
+        }
+        p {
+            margin: 0 15px 40px;
+            max-width: 350px;
+            color: $blue;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .btn-link {
+            border-radius:50px;
+            color: $gray-light;
+            background-color: $blue;
+            margin: 20px 0;
+            padding: 15px 40px;
+        }
+    }
+    .social-wrapper {
+        margin: 30px auto 20px;
+        .outside-link {
+
+        }
+        .github-link, .youtube-link, .demo-link {
+            color: $blue;
+            font-size: 50px;
+        }
+        .youtube-link {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+}
