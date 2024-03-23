@@ -1,0 +1,45 @@
+@import '../../base/main.scss';
+
+
+#login-container, #register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .login-heading, .register-heading {
+        color: $blue;
+    }
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        label { font-weight: bold; }
+        margin-bottom: 12px;
+
+        input {
+            background-color: $white;
+            border-radius: 8px;
+            color: $black;
+            padding: 4px;
+            &:focus {
+                border-radius: 8px;
+            }
+            &:active {
+                border-radius: 8px;
+            }
+        }
+    }
+    .login-buttons, .register-buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+    }
+    .sign-in-button {
+        margin-bottom: 10px;
+    }
+    button { border: 2px solid $blue; }
+    button:hover {
+        background-color: white;
+        border: 2px solid $blue;
+        color: $blue;
+    }
+}
