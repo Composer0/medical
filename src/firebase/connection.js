@@ -1,12 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { initializeAuth } from "firebase/auth";
-import { initializeDatabase } from "firebase/database";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getDatabase, ref, set } from "firebase/database";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyA5RE_8NpYOt98KStUn6sv9qprucGaDBvY",
   authDomain: "medical-46e8f.firebaseapp.com",
@@ -19,73 +16,73 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = initializeAuth(firebaseConfig);
-const database = initializeDatabase(firebaseConfig);
+const auth = getAuth(app);
+const database = getDatabase(app);
 
 function Register() {
     // Get all input fields
-    username = document.getElementById('username').value;
-    firstName = document.getElementById('firstName').value;
-    email = document.getElementById('email').value;
-    password = document.getElementById('password').value;
+    const username = document.getElementById('username').value;
+    const firstName = document.getElementById('firstName').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-    if (validate_email(email) == false || validate_password(password) == false) {
+    if (!validate_email(email) || !validate_password(password)) {
         alert('Email or Password do not match the registered account');
         return;
     }
-    if (validate_field(username) == false || validate_field(firstName) == false) {
-        alert('please fill out all fields');
+    if (!validate_field(username) || !validate_field(firstName)) {
+        alert('Please fill out all fields');
         return;
     }
 
-    auth.createUserWithEmailAndPassword(email, password)
-    .then(function() {
-        var user = auth.currentUser;
+    console.log(auth, email, password);
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        const user = userCredential.user;
 
-        //Add user to the database
-        var database_ref = database.ref();
+        // Add user to the database
+        const databaseRef = ref(database, 'users/' + user.uid);
 
-        var user_data = {
-            firstName : firstName,
-            username : username,
-            email : email,
-            password : password,
-            last_login : Date.now()
+        const userData = {
+            firstName: firstName,
+            username: username,
+            email: email,
+            password: password,
+            last_login: Date.now()
+        };
+
+        set(databaseRef, userData)
+        .then(() => {
+            alert('User Created');
+        })
+        .catch((error) => {
+            console.log("database error", error)
+            alert('An error occurred while saving user data. Please try again later.');
+        });
+    })
+    .catch((error) => {
+        // Handle specific error cases
+        if (error.code === 'auth/email-already-in-use') {
+            alert('Email address is already in use. Please use a different email or log in.');
+        } else {
+            // Handle other errors
+            console.error('creation error', error);
+            alert('An error occurred during registration. Please try again later.');
         }
-
-        database_ref.child('users/' + user.uid).set(user_data);
-
-        alert('User Created')
-    })
-    .catch(function(error) {
-
-    })
+    });
 }
 
 function validate_email(email) {
-    expression = /^[^@]+@\w+(\.\w+)+\w$/
-    if (expression.test(email) == true) {
-        return true;
-    } else {
-        // Email don't work
-        return false;
-    }
+    const expression = /^[^@]+@\w+(\.\w+)+\w$/;
+    return expression.test(email);
 }
 
 function validate_password(password) {
-    if (password < 6) {
-        return false;
-    } else {
-        return true;
-    }
+    return password.length >= 6;
 }
 
 function validate_field(field) {
-    if (field.length < 0) {
-        return false;
-    } else {
-        return true;
-    }
+    return field.trim().length > 0;
 }
 
 export default Register;

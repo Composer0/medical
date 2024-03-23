@@ -1,12 +1,11 @@
 import React from 'react';
 import './LoginRegister.scss'
-import '../../firebase/connection.js'
-import { validatePassword } from 'firebase/auth';
+import Register from '../../firebase/connection.js'
 
 const RegisterPage = () => {
 
   const handleRegister = () => {
-    register();
+    Register();
   }
 
   return (
