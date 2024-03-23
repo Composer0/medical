@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.scss'
 import Card from './components/Card/Card.jsx'
-import Login from './components/LoginRegister/Login.jsx'
+import LoginPage from './components/LoginRegister/Login.jsx'
 import Register from './components/LoginRegister/Register.jsx'
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       {/* <Card /> */}
-      {/* <Login /> */}
-      <Register />
+      <LoginPage />
+      {/* <Register /> */}
     </>
   )
 }

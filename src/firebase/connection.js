@@ -2,6 +2,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -72,6 +74,28 @@ function Register() {
     });
 }
 
+function Login() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Assuming `auth` is defined outside the function scope
+    // If not, you need to pass `auth` as a parameter to the Login function
+
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log('Logged in user:', user);
+        alert('Logged in successfully');
+        // Redirect or perform any other action here
+    })
+    .catch((error) => {
+        console.error('Login error:', error);
+        alert('Failed to log in. Please check your credentials and try again.');
+    });
+}
+
+
 function validate_email(email) {
     const expression = /^[^@]+@\w+(\.\w+)+\w$/;
     return expression.test(email);
@@ -85,4 +109,4 @@ function validate_field(field) {
     return field.trim().length > 0;
 }
 
-export default Register;
+export { Register, Login };

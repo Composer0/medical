@@ -1,8 +1,24 @@
 import React from 'react';
 import './LoginRegister.scss'
-import Register from '../../firebase/connection.js'
+import { Register } from '../../firebase/connection.js'
 
 const RegisterPage = () => {
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+        if (event.keyCode === 13) {
+            if (document.activeElement.id === 'password') {
+                handleRegister();
+            }
+        }
+    };
+
+    document.addEventListener('keypress', handleKeyPress);
+
+    return () => {
+        document.removeEventListener('keypress', handleKeyPress);
+    };
+}, []);
 
   const handleRegister = () => {
     Register();
