@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './LoginRegister.scss';
-import { Login } from '../../firebase/connection.js';
+import { Login } from '../../firebase/connection.jsx';
 
 
 const LoginPage = () => {

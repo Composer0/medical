@@ -5,6 +5,7 @@ import './App.scss'
 import Card from './components/Card/Card.jsx'
 import LoginPage from './components/LoginRegister/Login.jsx'
 import RegisterPage from './components/LoginRegister/Register.jsx'
+import MedicationAdd from './components/MedicineAdd/MedicineAdd.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,8 @@ function App() {
     <>
       {/* <Card /> */}
       {/* <LoginPage /> */}
-      <RegisterPage />
+      {/* <RegisterPage /> */}
+      <MedicationAdd />
     </>
   )
 }

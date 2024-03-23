@@ -1,5 +1,22 @@
 @import '../../base/main';
 
-#medicineAdd-container {
-    
+#medicationAdd {
+    h1 { color: $blue; }
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    input {
+        border: 1px solid black;
+        padding: 4px;
+        background-color: $white;
+        color: $black;
+        border-radius: 8px;
+    }
+    .medicationRow {
+        display: flex;
+        justify-content: space-between;
+    }
 }

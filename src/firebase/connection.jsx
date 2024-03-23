@@ -1,9 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
-import { signInWithEmailAndPassword } from "firebase/auth";
-
+import { createStore, applyMiddleware } from 'redux';
+// import { Dispatch } from 'redux';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -75,6 +75,7 @@ function Register() {
     });
 }
 
+//dispatch was in argument
 function Login() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -89,6 +90,7 @@ function Login() {
         console.log('Logged in user:', user);
         alert('Logged in successfully');
         // Redirect or perform any other action here
+        // dispatch({ type: 'SET_USER', payload: user })
     })
     .catch((error) => {
         console.error('Login error:', error);
