@@ -1,7 +1,14 @@
 import React from 'react';
 import './LoginRegister.scss'
+import '../../firebase/connection.js'
+import { validatePassword } from 'firebase/auth';
 
 const RegisterPage = () => {
+
+  const handleRegister = () => {
+    register();
+  }
+
   return (
     <div id="register-container">
       <h1 className="register-heading">Register</h1>
@@ -22,7 +29,7 @@ const RegisterPage = () => {
         <input type="password" id="password" className="input-field" />
       </div>
       <div className='register-buttons'>
-        <button id="sign-in" className="sign-in-button">Sign In</button>
+        <button id="sign-in" className="sign-in-button" onClick={handleRegister}>Sign In</button>
         <button id="google-sign-in" className="google-sign-in-button sign-in-button">Sign In with Google</button>
         <button id="apple-sign-in" className="apple-sign-in-button sign-in-button">Sign In with Apple</button>
       </div>
