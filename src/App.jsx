@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.scss'
 import Card from './components/Card/Card.jsx'
 import LoginPage from './components/LoginRegister/Login.jsx'
-import Register from './components/LoginRegister/Register.jsx'
+import RegisterPage from './components/LoginRegister/Register.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       {/* <Card /> */}
-      <LoginPage />
-      {/* <Register /> */}
+      {/* <LoginPage /> */}
+      <RegisterPage />
     </>
   )
 }

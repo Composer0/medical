@@ -56,6 +56,7 @@ function Register() {
         set(databaseRef, userData)
         .then(() => {
             alert('User Created');
+            Login(email, password)
         })
         .catch((error) => {
             console.log("database error", error)
